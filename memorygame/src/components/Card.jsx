@@ -1,0 +1,21 @@
+import nflLogo from '../assets/nfl-logo.png'
+
+const Card = ({ image, selected, onClick }) => {
+
+  return (
+    <div className="card">
+      <div className={selected && 'selected'}>
+        <img alt="" src={image} className="card-face" />
+
+        <img
+          alt=""
+          className="card-back"
+          src={nflLogo}
+          onClick={onClick}
+        />
+      </div>
+    </div>
+  );
+};
+
+export default Card;
